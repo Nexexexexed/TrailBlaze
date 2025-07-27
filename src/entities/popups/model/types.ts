@@ -8,6 +8,14 @@ export interface PopupData {
   imageUrl?: string;
 }
 
+export interface AddingPopup {
+  Xcoord: number;
+  Ycoord: number;
+  title: string;
+  text: string;
+  imageUrl: string;
+}
+
 export interface PopupState {
   popups: PopupData[];
 }

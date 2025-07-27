@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "LatoLight";
+  src: url("../../public/assets/fonts/Lato/Lato-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatoRegular";
+  src: url("../../public/assets/fonts/Lato/Lato-Regular.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatoBold";
+  src: url("../../public/assets/fonts/Lato/Lato-Semibold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  --main-light-color: #cc6816;
+  --main-dark-color: #67350c;
+  --main-grey-color: rgb(128, 122, 113);
+  --black-color: #010101;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  width: 100vw;
+  height: 100vh;
+  background: var(--black-color);
+  background: linear-gradient(
+      90deg,
+      var(--black-color),
+      var(--main-dark-color),
+      var(--main-light-color)
+    )
+    no-repeat;
+  color: white;
+  font-family: "LatoRegular";
+  font-weight: 600;
+  font-size: 15px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

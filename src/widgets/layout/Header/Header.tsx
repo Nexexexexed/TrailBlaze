@@ -3,8 +3,11 @@ import { MdOutlineWhatsapp } from "react-icons/md";
 import { FaVk } from "react-icons/fa";
 import { PiTelegramLogo } from "react-icons/pi";
 import styles from "./Header.module.scss";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../../app/store";
 
 const Header = () => {
+  const isAuth = useSelector((state: RootState) => state.users.isAuth);
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -17,7 +20,11 @@ const Header = () => {
 
       <nav className={styles.navigation}>
         <Link to="/">Home</Link>
-        <Link to="/auth">Sign in</Link>
+        {isAuth ? (
+          <Link to="/profile">Profile</Link>
+        ) : (
+          <Link to="/auth">Sign in</Link>
+        )}
       </nav>
       <ul className={styles.social_network}>
         <li>

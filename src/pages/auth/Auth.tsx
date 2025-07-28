@@ -1,5 +1,7 @@
+import { LoginForm } from "../../widgets/login/LoginForm";
+
 const Auth = () => {
-  return <div></div>;
+  return <LoginForm />;
 };
 
 export default Auth;
